@@ -17,7 +17,6 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // NavLink active style
   const activeStyle = "text-black font-medium border-b-2 border-black";
   const inactiveStyle = "text-gray-600 hover:text-gray-900";
 
@@ -25,7 +24,6 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          {/* Logo */}
           <div className="flex items-center">
             <NavLink 
               to="/" 
@@ -34,8 +32,7 @@ const Navbar = () => {
               SetUp.
             </NavLink>
           </div>
-          
-          {/* Desktop Navigation */}
+
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <NavLink
@@ -51,8 +48,6 @@ const Navbar = () => {
               </NavLink>
             ))}
           </div>
-          
-          {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center">
             <button
               onClick={toggleMenu}
@@ -70,8 +65,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      
-      {/* Mobile Navigation */}
+
       {isMenuOpen && (
         <div className="md:hidden border-t border-gray-200">
           <div className="px-2 py-3 space-y-1">
